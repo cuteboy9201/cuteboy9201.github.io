@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>闭口不谈</title>
+    <link>http://cuteboy9201.github.io/</link>
+    <description>闭口不谈</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 18 Oct 2022 19:40:01 &#43;0800</lastBuildDate>
+      <atom:link href="http://cuteboy9201.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+  <title>构建nginx镜像</title>
+  <link>http://cuteboy9201.github.io/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/</link>
+  <pubDate>Tue, 18 Oct 2022 19:40:01 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://cuteboy9201.github.io/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/</guid>
+  <description><![CDATA[基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \]]></description>
+</item>
+<item>
+  <title>First</title>
+  <link>http://cuteboy9201.github.io/posts/first/</link>
+  <pubDate>Tue, 18 Oct 2022 12:09:17 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://cuteboy9201.github.io/posts/first/</guid>
+  <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
