@@ -24,7 +24,7 @@
 <meta name="application-name" content="闭口不谈">
 <meta name="apple-mobile-web-app-title" content="闭口不谈"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://cuteboy9201.github.io/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/" /><link rel="prev" href="http://cuteboy9201.github.io/posts/first/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://cuteboy9201.github.io/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/" /><link rel="prev" href="http://cuteboy9201.github.io/posts/first/" /><link rel="next" href="http://cuteboy9201.github.io/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
@@ -129,9 +129,12 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#基础镜像">基础镜像</a></li>
+    <li><a href="#dockerfile">DockerFile</a></li>
+    <li><a href="#其他文件">其他文件</a>
       <ul>
-        <li></li>
+        <li><a href="#nginxconf">nginx.conf</a></li>
+        <li><a href="#server_baseini">server_base.ini</a></li>
       </ul>
     </li>
   </ul>
@@ -141,7 +144,7 @@
       id="content"
       
       
-    ><h5 id="基础镜像">基础镜像</h5>
+    ><h2 id="基础镜像">基础镜像</h2>
 <pre tabindex="0"><code>from alpine:3.14
 RUN rm -rf /var/cache/apk/* &amp;&amp; \
     rm -rf /tmp/* &amp;&amp; \
@@ -152,7 +155,7 @@ RUN rm -rf /var/cache/apk/* &amp;&amp; \
 </code></pre><ul>
 <li>构建基础镜像 docker build -t youshumin/apline:3.14</li>
 </ul>
-<h5 id="dockerfile">DockerFile</h5>
+<h2 id="dockerfile">DockerFile</h2>
 <pre tabindex="0"><code>FROM youshumin/alpine:3.14
 
 ENV TENGINE_VERSION 2.3.3
@@ -314,8 +317,8 @@ EXPOSE 80 443
 STOPSIGNAL SIGTERM
 
 CMD [&#34;nginx&#34;, &#34;-g&#34;, &#34;daemon off;&#34;]
-</code></pre><h5 id="其他文件">其他文件</h5>
-<h6 id="nginxconf">nginx.conf</h6>
+</code></pre><h2 id="其他文件">其他文件</h2>
+<h3 id="nginxconf">nginx.conf</h3>
 <ul>
 <li><a href="http://minio.8min.top/2022/docker/nginx/build/nginx.conf"target="_blank" rel="external nofollow noopener noreferrer">http://minio.8min.top/2022/docker/nginx/build/nginx.conf</a></li>
 </ul>
@@ -388,7 +391,7 @@ http {
     proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
     include conf.d/*.conf;
 }
-</code></pre><h6 id="server_baseini">server_base.ini</h6>
+</code></pre><h3 id="server_baseini">server_base.ini</h3>
 <pre tabindex="0"><code>set $ip2regin_city &#39;&#39;;
 set $ip2regin_country &#39;&#39;;
 set $ip2regin_region  &#39;&#39;;
@@ -441,7 +444,8 @@ access_log logs/access_$year$month$day.log main;
     </section>
   </div>
 
-  <div class="post-nav"><a href="/posts/first/" class="prev" rel="prev" title="First"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>First</a></div>
+  <div class="post-nav"><a href="/posts/first/" class="prev" rel="prev" title="First"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>First</a>
+      <a href="/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/" class="next" rel="next" title="基础镜像">基础镜像<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></main><footer class="footer">
     <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>

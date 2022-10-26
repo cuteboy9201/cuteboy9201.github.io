@@ -3,7 +3,15 @@
     <title>docker - 标签 - 闭口不谈</title>
     <link>http://cuteboy9201.github.io/tags/docker/</link>
     <description>docker - 标签 - 闭口不谈</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 18 Oct 2022 19:40:01 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Oct 2022 16:58:15 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/tags/docker/" rel="self" type="application/rss+xml" /><item>
+  <title>基础镜像</title>
+  <link>http://cuteboy9201.github.io/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/</link>
+  <pubDate>Tue, 25 Oct 2022 16:58:15 &#43;0800</pubDate>
+  <author>Yousm</author>
+  <guid>http://cuteboy9201.github.io/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/</guid>
+  <description><![CDATA[基础镜像 bash基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash ssh 基础镜像 FROM alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i]]></description>
+</item>
+<item>
   <title>构建nginx镜像</title>
   <link>http://cuteboy9201.github.io/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/</link>
   <pubDate>Tue, 18 Oct 2022 19:40:01 &#43;0800</pubDate>
