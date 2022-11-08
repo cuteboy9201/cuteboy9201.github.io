@@ -10,7 +10,7 @@
 <meta name="description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \" /><meta name="keywords" content='nginx, docker, 构建镜像' /><meta itemprop="name" content="构建nginx镜像">
 <meta itemprop="description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \"><meta itemprop="datePublished" content="2022-10-18T19:40:01+08:00" />
 <meta itemprop="dateModified" content="2022-10-18T19:40:01+08:00" />
-<meta itemprop="wordCount" content="918">
+<meta itemprop="wordCount" content="958">
 <meta itemprop="keywords" content="nginx,docker,构建镜像," /><meta property="og:title" content="构建nginx镜像" />
 <meta property="og:description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \" />
 <meta property="og:type" content="article" />
@@ -33,7 +33,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/cuteboy9201.github.io\/posts\/docker\/nginx\/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F\/"
-    },"genre": "posts","keywords": "nginx, docker, 构建镜像","wordcount":  918 ,
+    },"genre": "posts","keywords": "nginx, docker, 构建镜像","wordcount":  958 ,
     "url": "http:\/\/cuteboy9201.github.io\/posts\/docker\/nginx\/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F\/","datePublished": "2022-10-18T19:40:01+08:00","dateModified": "2022-10-18T19:40:01+08:00","publisher": {
       "@type": "Organization",
       "name": "作者"},"author": {
@@ -121,7 +121,7 @@
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>
           <span class="post-category">收录于 <a href="/categories/docker/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> docker</a></span></div>
-      <div class="post-meta-line"><span title=2022-10-18&#32;19:40:01><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-18">2022-10-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 约 918 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> 预计阅读 2 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span title=2022-10-18&#32;19:40:01><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-18">2022-10-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 约 958 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> 预计阅读 2 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -134,7 +134,7 @@
     <li><a href="#其他文件">其他文件</a>
       <ul>
         <li><a href="#nginxconf">nginx.conf</a></li>
-        <li><a href="#server_baseini">server_base.ini</a></li>
+        <li><a href="#log_infoini">log_info.ini</a></li>
       </ul>
     </li>
   </ul>
@@ -238,10 +238,14 @@ RUN     rm -rf /var/cache/apk/* \
 	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/v2022.10.19.0/luajit2-2.1-20210510.tar.gz&#34; -o luajit2-2.1-20210510.tar.gz \
 	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/v2022.10.19.0/ip2region.tar.gz&#34; -o ip2region.tar.gz \
 	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/v2022.10.19.0/ip2region.db&#34; -o ip2region.db \
+	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/v2022.10.19.0/lualib_2022.tar.gz&#34; -o lualib_2022.tar.gz \
+	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/base_v2022.11.07/log_info.ini&#34; -o log_info.ini \
+	&amp;&amp; curl -L &#34;http://minio.8min.top/2022/docker/nginx/build/base_v2022.11.07/nginx.conf&#34; -o nginx.conf \
         &amp;&amp; tar -zxC /usr/local/src -f /usr/local/src/ip2region.tar.gz \
         &amp;&amp; tar -zxC /usr/local/src -f /usr/local/src/tengine-2.3.3.tar.gz \
         &amp;&amp; tar -zxC /usr/local/src -f /usr/local/src/luajit2-2.1-20210510.tar.gz \
         &amp;&amp; tar -zxC /usr/local/src -f /usr/local/src/more.tar.gz \
+	&amp;&amp; tar -zxC /usr/local/src -f /usr/local/src/lualib_2022.tar.gz \
         &amp;&amp; ls /usr/local/src/ \
         &amp;&amp; mv /usr/local/src/headers-more-nginx-module-0.33 /usr/local/src/tengine-2.3.3/modules/ \
         &amp;&amp; cd /usr/local/src/luajit2-2.1-20210510 \
@@ -262,7 +266,6 @@ RUN     rm -rf /var/cache/apk/* \
         &amp;&amp; ./configure $CONFIG \
         &amp;&amp; make -j$(getconf _NPROCESSORS_ONLN) \
         &amp;&amp; make install \
-      #  &amp;&amp; rm -rf /etc/nginx/html/ \
         &amp;&amp; mkdir /etc/nginx/conf.d/ \
         &amp;&amp; mkdir -p /usr/share/nginx/html/ \
         &amp;&amp; install -m644 html/index.html /usr/share/nginx/html/ \
@@ -278,7 +281,13 @@ RUN     rm -rf /var/cache/apk/* \
         &amp;&amp; strip /usr/lib/nginx/modules/*.so \  
         &amp;&amp; mkdir -p /etc/nginx/ip2region/ \
         &amp;&amp; mkdir -p /var/cache/nginx \
+	\
+	# 更新部分配置
+	#  
         &amp;&amp; mv /usr/local/src/ip2region.db /etc/nginx/ip2region/ip2region.db \
+	&amp;&amp; mv /usr/local/src/lua /etc/nginx/ \
+	&amp;&amp; mv /usr/local/src/log_info.ini /etc/nginx/ip2region/ \
+	&amp;&amp; mv /usr/local/src/nginx.conf /etc/nginx/nginx.conf \
         &amp;&amp; rm -rf /usr/local/src/ \
         \
         # Bring in gettext so we can get `envsubst`, then throw
@@ -309,9 +318,6 @@ RUN     rm -rf /var/cache/apk/* \
         &amp;&amp; ls -l /usr/local/lib \
         &amp;&amp; apk add --no-cache -U libgcc 
 
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY server_base.ini /etc/nginx/ip2region/
-
 EXPOSE 80 443
 
 STOPSIGNAL SIGTERM
@@ -320,14 +326,14 @@ CMD [&#34;nginx&#34;, &#34;-g&#34;, &#34;daemon off;&#34;]
 </code></pre><h2 id="其他文件">其他文件</h2>
 <h3 id="nginxconf">nginx.conf</h3>
 <ul>
-<li><a href="http://minio.8min.top/2022/docker/nginx/build/nginx.conf"target="_blank" rel="external nofollow noopener noreferrer">http://minio.8min.top/2022/docker/nginx/build/nginx.conf</a></li>
+<li><a href="http://minio.8min.top/2022/docker/nginx/build/base_v2022.11.07/nginx.conf"target="_blank" rel="external nofollow noopener noreferrer">http://minio.8min.top/2022/docker/nginx/build/base_v2022.11.07/nginx.conf</a></li>
 </ul>
 <pre tabindex="0"><code>worker_processes  auto;
 worker_cpu_affinity auto;
 user root;
 pid /var/run/nginx.pid;
 worker_rlimit_nofile 65535;
-error_log &#34;pipe:rollback logs/error.log interval=1d baknum=30 maxsize=1G&#34;  error;
+error_log &#34;pipe:rollback logs/error.log interval=1d baknum=7 maxsize=1G&#34;  error;
 events {
         use epoll;
         worker_connections  65535;
@@ -391,7 +397,7 @@ http {
     proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
     include conf.d/*.conf;
 }
-</code></pre><h3 id="server_baseini">server_base.ini</h3>
+</code></pre><h3 id="log_infoini">log_info.ini</h3>
 <pre tabindex="0"><code>set $ip2regin_city &#39;&#39;;
 set $ip2regin_country &#39;&#39;;
 set $ip2regin_region  &#39;&#39;;
