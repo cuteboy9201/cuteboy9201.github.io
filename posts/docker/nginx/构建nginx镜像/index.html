@@ -10,7 +10,7 @@
 <meta name="description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \" /><meta name="keywords" content='nginx, docker, 构建镜像' /><meta itemprop="name" content="构建nginx镜像">
 <meta itemprop="description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \"><meta itemprop="datePublished" content="2022-10-18T19:40:01+08:00" />
 <meta itemprop="dateModified" content="2022-10-18T19:40:01+08:00" />
-<meta itemprop="wordCount" content="958">
+<meta itemprop="wordCount" content="960">
 <meta itemprop="keywords" content="nginx,docker,构建镜像," /><meta property="og:title" content="构建nginx镜像" />
 <meta property="og:description" content="基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \" />
 <meta property="og:type" content="article" />
@@ -33,7 +33,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/cuteboy9201.github.io\/posts\/docker\/nginx\/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F\/"
-    },"genre": "posts","keywords": "nginx, docker, 构建镜像","wordcount":  958 ,
+    },"genre": "posts","keywords": "nginx, docker, 构建镜像","wordcount":  960 ,
     "url": "http:\/\/cuteboy9201.github.io\/posts\/docker\/nginx\/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F\/","datePublished": "2022-10-18T19:40:01+08:00","dateModified": "2022-10-18T19:40:01+08:00","publisher": {
       "@type": "Organization",
       "name": "作者"},"author": {
@@ -121,7 +121,7 @@
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>
           <span class="post-category">收录于 <a href="/categories/docker/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> docker</a></span></div>
-      <div class="post-meta-line"><span title=2022-10-18&#32;19:40:01><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-18">2022-10-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 约 958 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> 预计阅读 2 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span title=2022-10-18&#32;19:40:01><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-18">2022-10-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 约 960 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> 预计阅读 2 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -428,6 +428,7 @@ access_log logs/access_$year$month$day.log main;
 # error_log &#34;pipe:rollback logs/error_log interval=1m baknum=7 maxsize=2G&#34;  error;
 </code></pre><ul>
 <li>构建命令 docker build -t youshumin/nginx:2.3.3</li>
+<li>启动</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
@@ -455,7 +456,7 @@ access_log logs/access_$year$month$day.log main;
 </div>
 </article></main><footer class="footer">
     <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
-            <span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">
+            <span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">
               <a href="/"></a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://github.com/cuteboy9201" target="_blan     k">Yousm</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中 ...'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i>&nbsp;<span class="run-times">网站运行中 ...</span></span></div></div>
   </footer></div><div class="widgets"><div id="mask"></div><noscript>
     <div class="noscript-warning">FixIt 主题在启用 JavaScript 的情况下效果最佳。</div>
