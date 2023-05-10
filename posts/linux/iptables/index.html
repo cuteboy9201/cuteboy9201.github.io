@@ -129,20 +129,28 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#41清除iptables规则">4.1清除iptables规则</a></li>
-    <li><a href="#42-设置默认规则">4.2 设置默认规则</a></li>
-    <li><a href="#43-设置本地回环">4.3 设置本地回环</a></li>
-    <li><a href="#44-允许已建立或相关连的连通">4.4 允许已建立或相关连的连通</a></li>
-    <li><a href="#45-开放端口建议加上-m">4.5 开放端口【建议加上-m】</a></li>
-    <li><a href="#46-封禁ip">4.6 封禁IP</a></li>
-    <li><a href="#47-其他常用命令">4.7 其他常用命令</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#51-默认input-output都reject">5.1 默认input, output都reject</a></li>
-    <li><a href="#52--开放端口事例">5.2  开放端口事例</a></li>
-    <li><a href="#53-限流">5.3 限流</a></li>
-    <li><a href="#54-转发">5.4 转发</a></li>
+    <li><a href="#1语法">1.语法</a></li>
+    <li><a href="#2选项">2.选项</a></li>
+    <li><a href="#3参数">3.参数</a></li>
+    <li><a href="#4基本事例">4.基本事例</a>
+      <ul>
+        <li><a href="#41清除iptables规则">4.1清除iptables规则</a></li>
+        <li><a href="#42-设置默认规则">4.2 设置默认规则</a></li>
+        <li><a href="#43-设置本地回环">4.3 设置本地回环</a></li>
+        <li><a href="#44-允许已建立或相关连的连通">4.4 允许已建立或相关连的连通</a></li>
+        <li><a href="#45-开放端口建议加上-m">4.5 开放端口【建议加上-m】</a></li>
+        <li><a href="#46-封禁ip">4.6 封禁IP</a></li>
+        <li><a href="#47-其他常用命令">4.7 其他常用命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-其他用法">5. 其他用法</a>
+      <ul>
+        <li><a href="#51-默认input-output都reject">5.1 默认input, output都reject</a></li>
+        <li><a href="#52--开放端口事例">5.2  开放端口事例</a></li>
+        <li><a href="#53-限流">5.3 限流</a></li>
+        <li><a href="#54-转发">5.4 转发</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
       </div><div
@@ -150,9 +158,9 @@
       id="content"
       
       
-    ><h1 id="1语法">1.语法</h1>
+    ><h2 id="1语法">1.语法</h2>
 <p><code>iptables [选项][参数]</code></p>
-<h1 id="2选项">2.选项</h1>
+<h2 id="2选项">2.选项</h2>
 <pre tabindex="0"><code>-t&lt;表&gt;: 指定要操作的表;
 -A: 向规则链中添加条目;
 -D: 从规则链中删除条目;
@@ -168,7 +176,7 @@
 -j&lt;目标&gt;: 指定要跳转的目标;
 -i&lt;网络接口&gt;: 指定数据包进入本机的网络接口;
 -o&lt;网络接口&gt;: 指定数据包要离开本机使用的网络接口;
-</code></pre><h1 id="3参数">3.参数</h1>
+</code></pre><h2 id="3参数">3.参数</h2>
 <pre tabindex="0"><code>iptables 命令选项输入顺序:
 
 iptables -t 表名 &lt;-A/I/D&gt; 规则链名 [规则号] &lt;-i/o 网卡名&gt; -p 协议名 &lt;-s 源ip/源子网&gt; --sport 源端口 &lt;-d 目标ip/目标子网&gt; --dport 目标端口 -j 动作
@@ -194,36 +202,36 @@ snat: 源地址转发
 dnat: 目标地址转发
 masqueread: ip伪装(nat), 用于adsL
 log: 日志记录
-</code></pre><h1 id="4基本事例">4.基本事例</h1>
-<h2 id="41清除iptables规则">4.1清除iptables规则</h2>
+</code></pre><h2 id="4基本事例">4.基本事例</h2>
+<h3 id="41清除iptables规则">4.1清除iptables规则</h3>
 <pre tabindex="0"><code>iptables -F 
 iptables -X
 iptables -Z
-</code></pre><h2 id="42-设置默认规则">4.2 设置默认规则</h2>
+</code></pre><h3 id="42-设置默认规则">4.2 设置默认规则</h3>
 <pre tabindex="0"><code>iptables -P INPUT reject 
 iptables -P PORWARD reject
 iptables -P OUTPUT accept
-</code></pre><h2 id="43-设置本地回环">4.3 设置本地回环</h2>
+</code></pre><h3 id="43-设置本地回环">4.3 设置本地回环</h3>
 <p><code>iptables -A INPUT -i lo -j accept</code></p>
-<h2 id="44-允许已建立或相关连的连通">4.4 允许已建立或相关连的连通</h2>
+<h3 id="44-允许已建立或相关连的连通">4.4 允许已建立或相关连的连通</h3>
 <p><code>iptables -A INPUT -m state --state ESTABLISHED,RELATED -j accept</code></p>
-<h2 id="45-开放端口建议加上-m">4.5 开放端口【建议加上-m】</h2>
+<h3 id="45-开放端口建议加上-m">4.5 开放端口【建议加上-m】</h3>
 <pre tabindex="0"><code>iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
 iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-</code></pre><h2 id="46-封禁ip">4.6 封禁IP</h2>
+</code></pre><h3 id="46-封禁ip">4.6 封禁IP</h3>
 <p><code>iptables -I INPUT -s 124.10.13.10 -j DROP</code></p>
-<h2 id="47-其他常用命令">4.7 其他常用命令</h2>
+<h3 id="47-其他常用命令">4.7 其他常用命令</h3>
 <pre tabindex="0"><code>iptanles -nvL  查询已经添加的规则链
 iptables -nL --line-numbers 将所有iptables以序号标记显示
 iptables -D INPUT 8 删除input链序号为8的规则
 iptables-save &gt; /root/iptable.rules 保存到文件
 iptables-restore &lt; /root/iptable.rules 重载
-</code></pre><h1 id="5-其他用法">5. 其他用法</h1>
-<h2 id="51-默认input-output都reject">5.1 默认input, output都reject</h2>
+</code></pre><h2 id="5-其他用法">5. 其他用法</h2>
+<h3 id="51-默认input-output都reject">5.1 默认input, output都reject</h3>
 <pre tabindex="0"><code>iptables -P INPUT  -j reject 
 iptables -P OUTPUT -j reject 
-</code></pre><h2 id="52--开放端口事例">5.2  开放端口事例</h2>
+</code></pre><h3 id="52--开放端口事例">5.2  开放端口事例</h3>
 <pre tabindex="0"><code># 允许在eth0上接入ssh
 iptables -A INPUT  -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j accept
 iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j accept 
@@ -239,8 +247,8 @@ iptables -A OUTPUT -o eth0 -p tcp -m multiport --sport 22,80,443 -m state --stat
 # 要连接外面ssh
 iptables -A OUTPUT -o eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j accept
 iptables -A INPUT -i eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j accept
-</code></pre><h2 id="53-限流">5.3 限流</h2>
-<h2 id="54-转发">5.4 转发</h2>
+</code></pre><h3 id="53-限流">5.3 限流</h3>
+<h3 id="54-转发">5.4 转发</h3>
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
