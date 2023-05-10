@@ -3,7 +3,15 @@
     <title>所有文章 - 闭口不谈</title>
     <link>http://cuteboy9201.github.io/posts/</link>
     <description>所有文章 | 闭口不谈</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Feb 2023 14:54:04 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 11 May 2023 00:30:49 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>Iptables</title>
+  <link>http://cuteboy9201.github.io/posts/linux/iptables/</link>
+  <pubDate>Thu, 11 May 2023 00:30:49 &#43;0800</pubDate>
+  <author>Yousm</author>
+  <guid>http://cuteboy9201.github.io/posts/linux/iptables/</guid>
+  <description><![CDATA[1.语法 iptables [选项][参数] 2.选项 -t&lt;表&gt;: 指定要操作的表; -A: 向规则链中添加条目; -D: 从规则链中删除条目; -I: 向规则链中插入条目;]]></description>
+</item>
+<item>
   <title>安装docker</title>
   <link>http://cuteboy9201.github.io/posts/docker/%E5%AE%89%E8%A3%85docker/</link>
   <pubDate>Wed, 15 Feb 2023 14:54:04 &#43;0800</pubDate>

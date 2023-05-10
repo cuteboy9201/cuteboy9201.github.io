@@ -3,20 +3,20 @@
     <title>Categories - 分类 - 闭口不谈</title>
     <link>http://cuteboy9201.github.io/categories/</link>
     <description>Categories - 分类 - 闭口不谈</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Feb 2023 14:54:04 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 11 May 2023 00:30:49 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+  <title>draft</title>
+  <link>http://cuteboy9201.github.io/categories/draft/</link>
+  <pubDate>Thu, 11 May 2023 00:30:49 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://cuteboy9201.github.io/categories/draft/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
   <title>docker</title>
   <link>http://cuteboy9201.github.io/categories/docker/</link>
   <pubDate>Wed, 15 Feb 2023 14:54:04 &#43;0800</pubDate>
   <author>作者</author>
   <guid>http://cuteboy9201.github.io/categories/docker/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>draft</title>
-  <link>http://cuteboy9201.github.io/categories/draft/</link>
-  <pubDate>Tue, 18 Oct 2022 12:09:17 &#43;0800</pubDate>
-  <author>作者</author>
-  <guid>http://cuteboy9201.github.io/categories/draft/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>
