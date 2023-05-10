@@ -11,13 +11,5 @@
   <guid>http://cuteboy9201.github.io/posts/linux/iptables/</guid>
   <description><![CDATA[1.语法 iptables [选项][参数] 2.选项 -t&lt;表&gt;: 指定要操作的表; -A: 向规则链中添加条目; -D: 从规则链中删除条目; -I: 向规则链中插入条目;]]></description>
 </item>
-<item>
-  <title>First</title>
-  <link>http://cuteboy9201.github.io/posts/first/</link>
-  <pubDate>Tue, 18 Oct 2022 12:09:17 &#43;0800</pubDate>
-  <author>作者</author>
-  <guid>http://cuteboy9201.github.io/posts/first/</guid>
-  <description><![CDATA[]]></description>
-</item>
 </channel>
 </rss>
