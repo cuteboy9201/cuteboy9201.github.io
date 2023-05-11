@@ -5,10 +5,10 @@
     <description>linux - 分类 - 闭口不谈</description>
     <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 11 May 2023 00:30:49 &#43;0800</lastBuildDate><atom:link href="http://cuteboy9201.github.io/categories/linux/" rel="self" type="application/rss+xml" /><item>
   <title>Iptables</title>
-  <link>http://cuteboy9201.github.io/posts/linux/iptables/</link>
+  <link>http://cuteboy9201.github.io/blog/linux/iptables/</link>
   <pubDate>Thu, 11 May 2023 00:30:49 &#43;0800</pubDate>
   <author>Yousm</author>
-  <guid>http://cuteboy9201.github.io/posts/linux/iptables/</guid>
+  <guid>http://cuteboy9201.github.io/blog/linux/iptables/</guid>
   <description><![CDATA[1.语法 iptables [选项][参数] 2.选项 -t&lt;表&gt;: 指定要操作的表; -A: 向规则链中添加条目; -D: 从规则链中删除条目; -I: 向规则链中插入条目;]]></description>
 </item>
 </channel>

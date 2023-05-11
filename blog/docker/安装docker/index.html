@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>安装docker - 闭口不谈</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="安装docker 先移除旧版docker sudo yum remove docker 安装一些必要的系统工具 sudo yum install -y yum-utils device-mapper-persistent-data lvm2 添加软件源信息 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 更新 yum 缓存 sudo yum makecache fast 安装 Docker-ce sudo yum -y install docker-ce 启" /><meta name="keywords" content='docker, docker-compose' /><meta itemprop="name" content="安装docker">
+<meta itemprop="description" content="安装docker 先移除旧版docker sudo yum remove docker 安装一些必要的系统工具 sudo yum install -y yum-utils device-mapper-persistent-data lvm2 添加软件源信息 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 更新 yum 缓存 sudo yum makecache fast 安装 Docker-ce sudo yum -y install docker-ce 启"><meta itemprop="datePublished" content="2023-02-15T14:54:04+08:00" />
+<meta itemprop="dateModified" content="2023-02-15T14:54:04+08:00" />
+<meta itemprop="wordCount" content="296">
+<meta itemprop="keywords" content="docker,docker-compose," /><meta property="og:title" content="安装docker" />
+<meta property="og:description" content="安装docker 先移除旧版docker sudo yum remove docker 安装一些必要的系统工具 sudo yum install -y yum-utils device-mapper-persistent-data lvm2 添加软件源信息 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 更新 yum 缓存 sudo yum makecache fast 安装 Docker-ce sudo yum -y install docker-ce 启" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://cuteboy9201.github.io/blog/docker/%E5%AE%89%E8%A3%85docker/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-15T14:54:04+08:00" />
+<meta property="article:modified_time" content="2023-02-15T14:54:04+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="安装docker"/>
+<meta name="twitter:description" content="安装docker 先移除旧版docker sudo yum remove docker 安装一些必要的系统工具 sudo yum install -y yum-utils device-mapper-persistent-data lvm2 添加软件源信息 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 更新 yum 缓存 sudo yum makecache fast 安装 Docker-ce sudo yum -y install docker-ce 启"/>
+<meta name="application-name" content="闭口不谈">
+<meta name="apple-mobile-web-app-title" content="闭口不谈"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://cuteboy9201.github.io/blog/docker/%E5%AE%89%E8%A3%85docker/" /><link rel="prev" href="http://cuteboy9201.github.io/blog/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/" /><link rel="next" href="http://cuteboy9201.github.io/blog/linux/iptables/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "安装docker",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/cuteboy9201.github.io\/blog\/docker\/%E5%AE%89%E8%A3%85docker\/"
+    },"genre": "blog","keywords": "docker, docker-compose","wordcount":  296 ,
+    "url": "http:\/\/cuteboy9201.github.io\/blog\/docker\/%E5%AE%89%E8%A3%85docker\/","datePublished": "2023-02-15T14:54:04+08:00","dateModified": "2023-02-15T14:54:04+08:00","publisher": {
+      "@type": "Organization",
+      "name": "作者"},"author": {
+        "@type": "Person",
+        "name": "作者"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="闭口不谈"><span class="header-title-text">闭口不谈</span></a></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/blog/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="闭口不谈"><span class="header-title-text">闭口不谈</span></a></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/blog/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container" data-page-style="normal"><article class="page single special">
+    <div class="header"><h1 class="single-title animate__animated animate__pulse animate__faster">安装docker</h1></div><div
+      class="content"
+      id="content"
+      
+      
+    ><h4 id="安装docker">安装docker</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">先移除旧版docker
+</span></span><span class="line"><span class="cl">sudo yum remove docker
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">安装一些必要的系统工具
+</span></span><span class="line"><span class="cl">sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">添加软件源信息
+</span></span><span class="line"><span class="cl">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">更新 yum 缓存
+</span></span><span class="line"><span class="cl">sudo yum makecache fast
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">安装 Docker-ce
+</span></span><span class="line"><span class="cl">sudo yum -y install docker-ce
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">启动 Docker 后台服务
+</span></span><span class="line"><span class="cl">sudo systemctl start docker
+</span></span></code></pre></div><h3 id="安装docker-compose">安装docker-compose</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">1、下载docker-compose
+</span></span><span class="line"><span class="cl">sudo curl -L <span class="s2">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&#34;</span> -o /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、增加可执行权限
+</span></span><span class="line"><span class="cl">sudo chmod +x /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、添加软链接
+</span></span><span class="line"><span class="cl">sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、确认版本
+</span></span><span class="line"><span class="cl">$ docker-compose --version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5、增加docker-compose命令补全
+</span></span><span class="line"><span class="cl">sudo yum install bash-completion -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo curl <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -o /etc/bash_completion.d/docker-compose
+</span></span></code></pre></div><h3 id="安装脚本">安装脚本</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装docker-compose</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载docker-compose </span>
+</span></span><span class="line"><span class="cl">curl -L <span class="s2">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&#34;</span> -o /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加执行权限</span>
+</span></span><span class="line"><span class="cl">chmod +x /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl"><span class="c1">#添加软链接</span>
+</span></span><span class="line"><span class="cl">ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#确认版本</span>
+</span></span><span class="line"><span class="cl">docker-compose --version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 增加docker-compose命令补全</span>
+</span></span><span class="line"><span class="cl">yum install bash-completion -y
+</span></span><span class="line"><span class="cl">curl <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -o /etc/bash_completion.d/docker-compose
+</span></span></code></pre></div></div></article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://github.com/cuteboy9201" target="_blan     k">Yousm</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中 ...'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i>&nbsp;<span class="run-times">网站运行中 ...</span></span></div></div>
+  </footer></div><div class="widgets"><div id="mask"></div><noscript>
+    <div class="noscript-warning">FixIt 主题在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/lunr/lunr.min.js" defer></script><script src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script src="/lib/lunr/lunr.zh.min.js" defer></script><script src="/lib/lazysizes/lazysizes.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30},"siteTime":"2022-10-10T18:00:00+08:00"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

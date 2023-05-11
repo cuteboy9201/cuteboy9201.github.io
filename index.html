@@ -38,7 +38,7 @@
       <ul class="menu"><li class="menu-item">
               <a
                 class="menu-link"
-                href="/posts/"
+                href="/blog/"
                 
                 
               ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li class="menu-item">
@@ -53,7 +53,18 @@
                 href="/tags/"
                 
                 
-              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
           <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
         </li>
       </ul>
@@ -69,11 +80,27 @@
       </div>
     </div>
     <nav>
-      <ul class="menu" id="menu-mobile"><li
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
               class="menu-item"
             ><a
                   class="menu-link"
-                  href="/posts/"
+                  href="/blog/"
                   
                   
                 ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 文章</a></li><li
@@ -95,31 +122,12 @@
         </li></ul>
     </nav>
   </div>
-</header><main class="container" data-page-style="normal"><div class="page home posts"><div class="home-profile"></div>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/iptables/">Iptables</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Yousm</span></span>&nbsp;<span class="post-publish" title='2023-05-11 00:30:49'>发布于 <time datetime="2023-05-11">2023-05-11</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content">1.语法 iptables [选项][参数] 2.选项 -t&lt;表&gt;: 指定要操作的表; -A: 向规则链中添加条目; -D: 从规则链中删除条目; -I: 向规则链中插入条目;</div><div class="post-footer">
-    <a href="/posts/linux/iptables/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/iptables/">iptables</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/docker/%E5%AE%89%E8%A3%85docker/">安装docker</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-02-15 14:54:04'>发布于 <time datetime="2023-02-15">2023-02-15</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/docker/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> docker</a></span></div><div class="content">安装docker 先移除旧版docker sudo yum remove docker 安装一些必要的系统工具 sudo yum install -y yum-utils device-mapper-persistent-data lvm2 添加软件源信息 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 更新 yum 缓存 sudo yum makecache fast 安装 Docker-ce sudo yum -y install docker-ce 启</div><div class="post-footer">
-    <a href="/posts/docker/%E5%AE%89%E8%A3%85docker/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/docker-compose/">docker-compose</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/">基础镜像</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Yousm</span></span>&nbsp;<span class="post-publish" title='2022-10-25 16:58:15'>发布于 <time datetime="2022-10-25">2022-10-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/docker/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> docker</a></span></div><div class="content">基础镜像 bash基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash ssh 基础镜像 FROM alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i</div><div class="post-footer">
-    <a href="/posts/docker/alpine/%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/alpine/">alpine</a>,&nbsp;<a href="/tags/docker/">docker</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/">构建nginx镜像</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2022-10-18 19:40:01'>发布于 <time datetime="2022-10-18">2022-10-18</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/docker/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> docker</a></span></div><div class="content">基础镜像 from alpine:3.14 RUN rm -rf /var/cache/apk/* &amp;&amp; \ rm -rf /tmp/* &amp;&amp; \ set -eux &amp;&amp; sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories &amp;&amp; \ apk add --no-cache bash tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \ /bin/bash 构建基础镜像 docker build -t youshumin/apline:3.14 DockerFile FROM youshumin/alpine:3.14 ENV TENGINE_VERSION 2.3.3 ENV CONFIG &#34;\ --prefix=/etc/nginx \ --sbin-path=/usr/sbin/nginx \ --modules-path=/usr/lib/nginx/modules \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --http-log-path=/var/log/nginx/access.log \</div><div class="post-footer">
-    <a href="/posts/docker/nginx/%E6%9E%84%E5%BB%BAnginx%E9%95%9C%E5%83%8F/">阅读全文</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nginx/">nginx</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F/">构建镜像</a></div></div>
-</article>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container" data-page-style="normal"><div class="page home posts"><div class="home-profile"></div>
 </div></main><footer class="footer">
     <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">
@@ -127,5 +135,5 @@
   </footer></div><div class="widgets"><div id="mask"></div><noscript>
     <div class="noscript-warning">FixIt 主题在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><script src="/lib/lazysizes/lazysizes.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"siteTime":"2022-10-10T18:00:00+08:00"};</script><script src="/js/theme.min.js" defer></script></body>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/lunr/lunr.min.js" defer></script><script src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script src="/lib/lunr/lunr.zh.min.js" defer></script><script src="/lib/lazysizes/lazysizes.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30},"siteTime":"2022-10-10T18:00:00+08:00"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>
